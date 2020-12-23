@@ -186,5 +186,7 @@ if len(sys.argv) < 3:
 			except IndexError:
 				print("no argument provided --> no cleaning")
 
+	print("\n\nDone!")
+
 
 

